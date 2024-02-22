@@ -37,6 +37,16 @@ a:hover {
   color: var(--clr-brand-hover);
 }
 
+.weatherContainer {
+  display: flex;
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 900px;
+  background-color: var(--clr-highlight);
+  border: none;
+  border-radius: 10px;
+}
+
 .footer {
   text-align: center;
 }

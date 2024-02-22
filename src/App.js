@@ -3,6 +3,11 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
+      <div className="weatherContainer">
+        <div className="searchContainer">
+          <form className="searchForm"></form>
+        </div>
+      </div>
       <div className="footer">
         <p>
           <a
