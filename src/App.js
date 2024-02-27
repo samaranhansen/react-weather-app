@@ -1,20 +1,10 @@
 import "./App.css";
+import DisplayWeather from "./DisplayWeather.js";
 
 export default function App() {
   return (
     <div className="App">
-      <div className="weatherContainer">
-        <div className="searchContainer">
-          <form className="searchForm">
-            <input
-              type="search"
-              placeholder="Search for a city here"
-              className="searchInput"
-            />
-            <input type="submit" value="Search" className="searchButton" />
-          </form>
-        </div>
-      </div>
+      <DisplayWeather />
       <div className="footer">
         <p>
           <a

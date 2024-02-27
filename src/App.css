@@ -34,10 +34,9 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: var(--clr-brand-hover);
 }
 
-.weatherContainer {
+.weatherAppContainer {
   display: flex;
   margin: 10px auto;
   padding: 40px;
@@ -55,7 +54,7 @@ a:hover {
 
 .searchInput {
   display: inline-block;
-  padding: 10px;
+  padding: 10px 15px;
   width: max(50%, 700px);
   border: none;
   border-radius: 10px;
@@ -68,7 +67,7 @@ a:hover {
   margin-left: 10px;
   padding: 10px 15px;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   background-color: var(--clr-brand);
   color: var(--clr-background);
   font-family: var(--fnt-body);
