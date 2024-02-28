@@ -19,11 +19,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-p {
   font-family: var(--fnt-body);
-  color: var(--clr-font);
 }
 
 a {
@@ -36,8 +32,12 @@ a:hover {
   text-decoration: underline;
 }
 
+h1 {
+  font-size: 100px;
+}
+
 .weatherAppContainer {
-  display: flex;
+  display: block;
   margin: 10px auto;
   padding: 40px;
   max-width: 900px;
@@ -59,7 +59,6 @@ a:hover {
   border: none;
   border-radius: 10px;
   outline: none;
-  font-family: var(--fnt-body);
 }
 
 .searchButton {
@@ -70,12 +69,46 @@ a:hover {
   border-radius: 25px;
   background-color: var(--clr-brand);
   color: var(--clr-background);
-  font-family: var(--fnt-body);
   transition: all 150ms ease-in-out;
 }
 
 .searchButton:hover {
   background-color: var(--clr-brand-hover);
+}
+
+.weatherInfo {
+  margin: 15px;
+}
+
+.temperatureDisplay {
+  display: flex;
+}
+
+.temperatureDisplay ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.temperatureDisplay ul li {
+  display: inline-block;
+}
+
+.temperatureDisplay ul .unitButton {
+  display: inline;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: 1px solid var(--clr-brand);
+  border-radius: 25px;
+  color: var(--clr-brand);
+  background-color: var(--clr-background);
+  font-size: 10px;
+  vertical-align: top;
+  transition: all 150ms ease-in-out;
+}
+
+.temperatureDisplay ul .unitButton:hover {
+  color: var(--clr-background);
+  background-color: var(--clr-brand);
 }
 
 .footer {
