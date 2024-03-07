@@ -13,6 +13,14 @@
 
   --fnt-body: "Lato", sans-serif;
   --fnt-link: "Source Code Pro", monospace;
+
+  --fnt-sz-small: 40px;
+  --fnt-sz-medium: 70px;
+  --fnt-sz-large: 100px;
+
+  --rds-subtle: 10px;
+  --rds-round: 25px;
+  --rds-circular: 40px;
 }
 
 * {
@@ -33,7 +41,17 @@ a:hover {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: var(--fnt-sz-large);
+}
+
+h2 {
+  font-size: var(--fnt-sz-medium);
+  line-height: 5rem;
+}
+
+h3 {
+  font-size: var(--fnt-sz-small);
+  line-height: 2rem;
 }
 
 .weatherAppContainer {
@@ -43,7 +61,7 @@ h1 {
   max-width: 900px;
   background-color: var(--clr-highlight);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--rds-subtle);
 }
 
 .searchForm {
@@ -57,7 +75,7 @@ h1 {
   padding: 10px 15px;
   width: max(50%, 700px);
   border: none;
-  border-radius: 10px;
+  border-radius: var(--rds-subtle);
   outline: none;
 }
 
@@ -66,7 +84,7 @@ h1 {
   margin-left: 10px;
   padding: 10px 15px;
   border: none;
-  border-radius: 25px;
+  border-radius: var(--rds-round);
   background-color: var(--clr-brand);
   color: var(--clr-background);
   transition: all 150ms ease-in-out;
@@ -81,32 +99,25 @@ h1 {
 }
 
 .temperatureDisplay {
+  font-size: var(--fnt-sz-large);
   display: flex;
+  line-height: 5rem;
 }
 
-.temperatureDisplay ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-.temperatureDisplay ul li {
-  display: inline-block;
-}
-
-.temperatureDisplay ul .unitButton {
+.temperatureDisplay .unitButton {
   display: inline;
   margin-left: 10px;
   padding: 10px 15px;
   border: 1px solid var(--clr-brand);
-  border-radius: 25px;
+  border-radius: var(--rds-circular);
   color: var(--clr-brand);
   background-color: var(--clr-background);
-  font-size: 10px;
+  font-size: var(--fnt-sz-small);
   vertical-align: top;
   transition: all 150ms ease-in-out;
 }
 
-.temperatureDisplay ul .unitButton:hover {
+.temperatureDisplay .unitButton:hover {
   color: var(--clr-background);
   background-color: var(--clr-brand);
 }
