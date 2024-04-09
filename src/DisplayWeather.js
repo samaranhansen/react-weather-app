@@ -1,20 +1,12 @@
 import React from "react";
+import SearchForm from "./SearchForm.js";
 import DisplayForecast from "./DisplayForecast.js";
 import DisplayTemperature from "./DisplayTemperature.js";
 
 export default function DisplayWeather() {
   return (
     <div className="weatherAppContainer">
-      <div className="searchContainer">
-        <form className="searchForm">
-          <input
-            type="search"
-            placeholder="Search for a city here"
-            className="searchInput"
-          />
-          <input type="submit" value="Search" className="searchButton" />
-        </form>
-      </div>
+      <SearchForm />
       <div className="weatherInfo">
         <DisplayTemperature />
         <DisplayForecast />
