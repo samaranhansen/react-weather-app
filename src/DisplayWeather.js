@@ -10,8 +10,11 @@ export default function DisplayWeather() {
       <div className="weatherInfo">
         <div className="row">
           <div className="col-4">
-            <h3>Current City</h3>
+            <h2>Current City</h2>
             <p>April 9th 2024 5:29pm</p>
+            <h3>Cloudy</h3>
+            <p>💦 40% humidity</p>
+            <p> 🍃 30mps windspeed</p>
           </div>
           <div className="col-4">
             <img

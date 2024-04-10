@@ -14,8 +14,8 @@
   --fnt-body: "Lato", sans-serif;
   --fnt-link: "Source Code Pro", monospace;
 
-  --fnt-sz-small: 35px;
-  --fnt-sz-medium: 45px;
+  --fnt-sz-small: 30px;
+  --fnt-sz-medium: 40px;
   --fnt-sz-large: 90px;
 
   --rds-subtle: 10px;
@@ -40,8 +40,13 @@ a:hover {
   text-decoration: underline;
 }
 
+p {
+  line-height: 0.9rem;
+}
+
 h1 {
   font-size: var(--fnt-sz-large);
+  font-weight: 700;
 }
 
 h2 {
