@@ -46,7 +46,7 @@ h1 {
 
 h2 {
   font-size: var(--fnt-sz-medium);
-  line-height: 5rem;
+  line-height: 2rem;
 }
 
 h3 {
@@ -74,13 +74,17 @@ img {
 }
 
 .searchForm {
-  width: 100%;
+  padding: 20px;
+  max-width: 100%;
   display: flex;
   justify-content: space-evenly;
 }
 
-.searchInput {
+.searchContainer {
   display: inline-block;
+}
+
+.searchInput {
   padding: 10px 15px;
   width: max(50%, 700px);
   border: none;
