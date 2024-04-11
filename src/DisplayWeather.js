@@ -3,6 +3,8 @@ import SearchForm from "./SearchForm.js";
 import DisplayForecast from "./DisplayForecast.js";
 import DisplayTemperature from "./DisplayTemperature.js";
 
+const apiKey = "444tf5d2456e80bfca6a8o00f90438b9";
+
 export default function DisplayWeather() {
   return (
     <div className="weatherAppContainer">

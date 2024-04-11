@@ -14,7 +14,7 @@
   --fnt-body: "Lato", sans-serif;
   --fnt-link: "Source Code Pro", monospace;
 
-  --fnt-sz-small: 30px;
+  --fnt-sz-small: 25px;
   --fnt-sz-medium: 40px;
   --fnt-sz-large: 90px;
 
@@ -52,11 +52,13 @@ h1 {
 h2 {
   font-size: var(--fnt-sz-medium);
   line-height: 2rem;
+  font-weight: 700;
 }
 
 h3 {
   font-size: var(--fnt-sz-small);
   line-height: 2rem;
+  font-weight: 400;
 }
 
 ul {
