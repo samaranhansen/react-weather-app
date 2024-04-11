@@ -5,34 +5,39 @@ import DisplayForecast from "./DisplayForecast.js";
 import DisplayTemperature from "./DisplayTemperature.js";
 
 export default function DisplayWeather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState(null);
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  let city = "Tyler";
 
   function handleResponse(response) {
-    console.log(response);
+    console.log(response.data);
     setWeatherData({
+      ready: "true",
+      city: response.data.city,
+      date: new Date(response.data.time * 1000),
       temperature: response.data.temperature.current,
+      description: response.data.condition.description,
+      windspeed: Math.round(response.data.wind.speed),
+      humidity: response.data.temperature.humidity,
     });
-    setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="weatherAppContainer">
         <SearchForm />
         <div className="weatherInfo">
           <div className="row">
             <div className="col-4">
-              <h2>Tyler</h2>
+              <h2>{weatherData.city}</h2>
               <p>April 9th 2024 5:29pm</p>
-              <h3>Cloudy</h3>
-              <p>💦 40% humidity</p>
-              <p> 🍃 30mps windspeed</p>
+              <h3>{weatherData.description}</h3>
+              <p>💦 {weatherData.humidity}% humidity</p>
+              <p> 🍃 {weatherData.windspeed} windspeed</p>
             </div>
             <div className="col-4">
               <img
                 src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-                alt="icon"
+                alt={weatherData.description}
                 className="icon"
               />
             </div>
@@ -46,7 +51,6 @@ export default function DisplayWeather() {
     );
   } else {
     const apiKey = "444tf5d2456e80bfca6a8o00f90438b9";
-    let city = "Tyler";
     let units = "metric";
     let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
     axios.get(apiURL).then(handleResponse);

@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function DisplayTemperature(response) {
-  let temperature = Math.round(response.temperature);
+export default function DisplayTemperature(props) {
+  let temperature = Math.round(props.temperature);
   return (
     <div className="temperatureDisplay">
       <h1>{temperature}°</h1>
