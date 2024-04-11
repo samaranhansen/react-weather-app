@@ -6,6 +6,7 @@ export default function SearchForm() {
       <form className="searchForm">
         <input
           type="search"
+          autoFocus="on"
           placeholder="Search for a city here"
           className="searchInput"
         />
