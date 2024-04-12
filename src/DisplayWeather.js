@@ -11,9 +11,9 @@ export default function DisplayWeather() {
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
-      ready: "true",
+      ready: true,
       city: response.data.city,
-      date: new Date(response.data.time * 1000),
+      date: "Thursday 5:23pm",
       temperature: response.data.temperature.current,
       description: response.data.condition.description,
       windspeed: Math.round(response.data.wind.speed),
@@ -29,10 +29,10 @@ export default function DisplayWeather() {
           <div className="row">
             <div className="col-4">
               <h2>{weatherData.city}</h2>
-              <p>April 9th 2024 5:29pm</p>
-              <h3>{weatherData.description}</h3>
+              <p>{weatherData.date}</p>
+              <h3 className="text-capitalize">{weatherData.description}</h3>
               <p>💦 {weatherData.humidity}% humidity</p>
-              <p> 🍃 {weatherData.windspeed} windspeed</p>
+              <p> 🍃 {weatherData.windspeed} mps windspeed</p>
             </div>
             <div className="col-4">
               <img
