@@ -22,9 +22,23 @@ export default function DisplayWeather() {
   }
 
   if (weatherData.ready) {
+    function handleSubmit(event) {
+      event.preventDefault();
+    }
+
     return (
       <div className="weatherAppContainer">
-        <SearchForm />
+        <div className="searchContainer">
+          <form className="searchForm" onSubmit={handleSubmit}>
+            <input
+              type="search"
+              autoFocus="on"
+              placeholder="Search for a city here"
+              className="searchInput"
+            />
+            <input type="submit" value="Search" className="searchButton" />
+          </form>
+        </div>
         <div className="weatherInfo">
           <div className="row">
             <div className="col-4">
