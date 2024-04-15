@@ -4,7 +4,7 @@ import DisplayWeather from "./DisplayWeather.js";
 export default function App() {
   return (
     <div className="App">
-      <DisplayWeather />
+      <DisplayWeather defaultCity="Boulder" />
       <div className="footer">
         <p>
           <a
