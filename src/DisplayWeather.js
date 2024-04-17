@@ -24,22 +24,17 @@ export default function DisplayWeather(props) {
     search();
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
+  function handleCityChange(event) {
+    setCity(event.target.value);
   }
 
   function search() {
     const apiKey = "444tf5d2456e80bfca6a8o00f90438b9";
     let units = "metric";
-    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${props.city}&key=${apiKey}&units=${units}`;
+    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
     axios.get(apiURL).then(handleResponse);
 
     return "Loading...";
-  }
-
-  function handleCityChange(event) {
-    setCity(event.target.value);
   }
 
   if (weatherData.ready) {
