@@ -17,13 +17,13 @@ export default function DisplayWeather(props) {
       windspeed: Math.round(response.data.wind.speed),
       humidity: response.data.temperature.humidity,
     });
-
+  }
 
   function handleSubmit(event) {
     event.preventDefault();
     search();
   }
-  
+
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -43,7 +43,6 @@ export default function DisplayWeather(props) {
   }
 
   if (weatherData.ready) {
-
     return (
       <div className="weatherAppContainer">
         <div className="searchContainer">
