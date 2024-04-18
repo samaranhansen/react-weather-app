@@ -40,16 +40,13 @@ a:hover {
   text-decoration: underline;
 }
 
-p {
-  line-height: 0.9rem;
-}
-
 h1 {
   font-size: var(--fnt-sz-large);
   font-weight: 700;
 }
 
 h2 {
+  margin: 0;
   font-size: var(--fnt-sz-medium);
   line-height: 2rem;
   font-weight: 700;
@@ -57,7 +54,6 @@ h2 {
 
 h3 {
   font-size: var(--fnt-sz-small);
-  line-height: 2rem;
   font-weight: 400;
 }
 
@@ -66,8 +62,8 @@ ul {
   list-style-type: none;
 }
 
-img {
-  width: 95%;
+p {
+  margin-bottom: 0;
 }
 
 .weatherAppContainer {
@@ -118,6 +114,12 @@ img {
   margin: 15px 30px;
 }
 
+.iconBig {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
 .temperatureDisplay {
   font-size: var(--fnt-sz-large);
   line-height: 5rem;
@@ -133,7 +135,7 @@ img {
   color: var(--clr-brand);
   background-color: var(--clr-background);
   font-size: var(--fnt-sz-small);
-  vertical-align: top;
+  vertical-align: middle;
   transition: all 150ms ease-in-out;
 }
 

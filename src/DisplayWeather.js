@@ -11,7 +11,7 @@ export default function DisplayWeather(props) {
       ready: true,
       city: response.data.city,
       date: new Date(response.data.time * 1000),
-      temperature: "-19",
+      temperature: response.data.temperature.current,
       iconURL: response.data.condition.icon_url,
       description: response.data.condition.description,
       windspeed: Math.round(response.data.wind.speed),
