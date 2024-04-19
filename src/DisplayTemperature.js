@@ -1,22 +1,27 @@
 import React, { useState } from "react";
 
 export default function DisplayTemperature(props) {
-  const [unit, setUnit] = useState("°C");
+  const [unit, setUnit] = useState("celcius");
   let celcius = Math.round(props.temperature);
-  let fahrenheit = (celcius * 9) / 5 + 32;
+  let fahrenheit = Math.round((celcius * 9) / 5 + 32);
 
   function toFahrenheit(event) {
     event.preventDefault();
+    setUnit("fahrenheit");
   }
 
-  if (unit === "°C") {
-    setUnit("°F");
+  function toCelcius(event) {
+    event.preventDefault();
+    setUnit("celcius");
+  }
+
+  if (unit === "celcius") {
     return (
       <div className="temperatureDisplay">
         <h1>
-          {fahrenheit}°
+          {celcius}°
           <button className="unitButton" onClick={toFahrenheit}>
-            {unit}
+            C
           </button>
         </h1>
       </div>
@@ -26,26 +31,11 @@ export default function DisplayTemperature(props) {
       <div className="temperatureDisplay">
         <h1>
           {fahrenheit}°
-          <button className="unitButton" onClick={changeUnit}>
-            {unit}
+          <button className="unitButton" onClick={toCelcius}>
+            F
           </button>
         </h1>
       </div>
     );
   }
-
-  function changeUnit(props) {
-    setUnit("°F");
-  }
-
-  return (
-    <div className="temperatureDisplay">
-      <h1>
-        {celcius}°
-        <button className="unitButton" onClick={changeUnit}>
-          {unit}
-        </button>
-      </h1>
-    </div>
-  );
 }
