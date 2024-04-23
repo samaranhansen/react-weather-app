@@ -10,11 +10,11 @@ export default function DisplayWeatherInfo(props) {
         <div className="col-4">
           <h2>{props.data.city}</h2>
           <FormatDate date={props.data.date} />
-          <h3 className="text-capitalize">{props.data.description}</h3>
+          <p className="text-capitalize">{props.data.description}</p>
           <p>💦 {props.data.humidity}% humidity</p>
           <p> 🍃 {props.data.windspeed} mps windspeed</p>
         </div>
-        <div className="col-4">
+        <div className="col-4 weatherDescription">
           <img
             src={props.data.iconURL}
             alt={props.data.description}

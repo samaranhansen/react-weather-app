@@ -114,6 +114,10 @@ p {
   margin: 15px 30px;
 }
 
+.weatherDescription {
+  text-align: center;
+}
+
 .iconBig {
   width: 70%;
   display: block;
