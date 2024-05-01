@@ -18,6 +18,10 @@
   --fnt-sz-medium: 40px;
   --fnt-sz-large: 90px;
 
+  --fnt-wt-thin: 100;
+  --fnt-wt-regular: 400;
+  --fnt-wt-bold: 700;
+
   --rds-subtle: 10px;
   --rds-round: 25px;
   --rds-circular: 40px;
@@ -155,4 +159,8 @@ p {
 
 .footer p {
   font-family: var(--fnt-link);
+}
+
+.forecastTempMin {
+  font-weight: 700;
 }
