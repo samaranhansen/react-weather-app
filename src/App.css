@@ -50,7 +50,7 @@ h1 {
 }
 
 h2 {
-  margin: 0;
+  margin-bottom: 10px;
   font-size: var(--fnt-sz-medium);
   line-height: 2rem;
   font-weight: 700;
@@ -68,6 +68,7 @@ ul {
 
 p {
   margin-bottom: 0;
+  line-height: 1.7rem;
 }
 
 .weatherAppContainer {
@@ -161,6 +162,14 @@ p {
   font-family: var(--fnt-link);
 }
 
-.forecastTempMin {
+.forecastTemps {
+  color: var(--clr-secondary);
+}
+
+.forecastTemps * {
+  margin: 0px 5px;
+}
+
+.forecastTempMax {
   font-weight: 700;
 }
