@@ -54,6 +54,7 @@ h2 {
   font-size: var(--fnt-sz-medium);
   line-height: 2rem;
   font-weight: 700;
+  color: var(--clr-secondary);
 }
 
 h3 {
@@ -162,8 +163,21 @@ p {
   font-family: var(--fnt-link);
 }
 
+.forecastDisplay {
+  margin: 20px 10px;
+  text-align: center;
+}
+
+.forecastDay {
+  color: var(--clr-tertiary);
+}
+
 .forecastTemps {
   color: var(--clr-secondary);
+}
+
+.forecastIcon {
+  width: 5.5rem;
 }
 
 .forecastTemps * {
