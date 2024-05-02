@@ -89,16 +89,13 @@ p {
   justify-content: space-evenly;
 }
 
-.searchContainer {
-  display: inline-block;
-}
-
 .searchInput {
   padding: 10px 15px;
-  width: max(50%, 700px);
+  width: 100%;
   border: none;
   border-radius: var(--rds-subtle);
   outline: none;
+  display: flex;
 }
 
 .searchButton {
